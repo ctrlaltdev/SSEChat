@@ -1,0 +1,15 @@
+doctype
+html(lang='en')
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Chat
+body
+  #chat
+  form#send
+    input#roomid(hidden value=roomid)
+    input#username(hidden value=username)
+    input#input(name='input' placeholder='Enter your message')
+    button Send
+  script(src='/main.js')

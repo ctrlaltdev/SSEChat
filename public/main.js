@@ -16,9 +16,19 @@ const connect = (roomid, username) => {
   eventSrc.addEventListener('message', (event) => {
     console.info(event)
     const msgWrapper = document.createElement('div')
-    const msg = document.createTextNode(`${JSON.parse(event.data).username}: ${JSON.parse(event.data).msg}`)
+    msgWrapper.classList.add('message')
+    const userWrapper = document.createElement('span')
+    userWrapper.classList.add('username')
+    if (JSON.parse(event.data).username === username) {
+      userWrapper.classList.add('me')
+    }
+    const user = document.createTextNode(`${JSON.parse(event.data).username}: `)
+    userWrapper.append(user)
+    const msg = document.createTextNode(`${JSON.parse(event.data).msg}`)
+    msgWrapper.append(userWrapper)
     msgWrapper.append(msg)
     document.querySelector('#chat').append(msgWrapper)
+    document.querySelector('#chat').scrollBy(0, window.innerHeight)
   })
 }
 

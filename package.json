@@ -5,16 +5,19 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "build": "node-sass -o public/ --output-style compressed style",
+    "start:dev": "concurrently \"node-sass -w -o public/ --output-style expanded style\" \"nodemon server.js\""
   },
   "author": "Yorick <yorick@ctrlalt.dev>",
   "license": "MPL-2.0",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "node-sass": "^4.13.0",
     "pug": "^2.0.4"
   },
   "devDependencies": {
+    "concurrently": "^5.0.0",
     "nodemon": "^1.19.4"
   }
 }

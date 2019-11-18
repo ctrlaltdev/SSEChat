@@ -1,0 +1,95 @@
+@import "reset"
+@import "colors"
+
+html, body
+  background-color: $primary
+  color: White
+  font-family: sans-serif
+  font-size: 8px
+
+html
+  height: 100%
+body
+  min-height: 100%
+
+#home
+  display: flex
+  flex-flow: row nowrap
+  height: 100vh
+  align-items: center
+  margin: 0 auto
+  max-width: 800px
+
+#username
+  background-color: transparent
+  border: none
+  border-bottom: 2px $secondary solid
+  border-top: 2px transparent solid
+  box-sizing: border-box
+  color: White
+  flex: 1 0 auto
+  font-size: 2rem
+  padding: 1rem 2rem
+
+#connect
+  background-color: transparent
+  border: 2px $secondary solid
+  box-sizing: border-box
+  color: $secondary
+  cursor: pointer
+  flex: 0 0 auto
+  font-size: 2rem
+  padding: 1rem 2rem
+
+#chatroom
+  box-sizing: border-box
+  display: flex
+  flex-flow: column nowrap
+  height: 100vh
+  margin: 0 auto
+  padding: 1rem
+
+#chat
+  flex: 0 0 auto
+  font-size: 2rem
+  overflow-y: auto
+  height: calc(100% - 5rem)
+
+#send
+  box-sizing: border-box
+  flex: 0 0 auto
+  width: 100%
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  margin: 0 auto
+
+#input
+  background-color: transparent
+  border: none
+  border-bottom: 2px $ternary solid
+  border-top: 2px transparent solid
+  box-sizing: border-box
+  color: White
+  flex: 1 0 auto
+  font-size: 2rem
+  padding: 1rem 2rem
+
+#sendBtn
+  background-color: transparent
+  border: 2px $ternary solid
+  box-sizing: border-box
+  color: $ternary
+  cursor: pointer
+  flex: 0 0 auto
+  font-size: 2rem
+  padding: 1rem 2rem
+
+.message
+  margin-bottom: 1rem
+
+.username
+  color: $secondary
+  margin-right: 2rem
+  &.me
+    opacity: 0.4

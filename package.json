@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "node-sass -o public/ --output-style compressed style",
+    "test": "jest --coverage",
     "start:dev": "concurrently \"node-sass -w -o public/ --output-style expanded style\" \"nodemon server.js\""
   },
   "author": "Yorick <yorick@ctrlalt.dev>",
@@ -18,6 +19,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
-    "nodemon": "^1.19.4"
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2"
   }
 }

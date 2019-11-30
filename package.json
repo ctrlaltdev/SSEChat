@@ -1,5 +1,5 @@
 {
-  "name": "ssechat",
+  "name": "kryptokitty",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,7 +7,8 @@
     "start": "node server.js",
     "build": "node-sass -o public/ --output-style compressed style",
     "test": "jest --coverage",
-    "start:dev": "concurrently \"node-sass -w -o public/ --output-style expanded style\" \"nodemon server.js\""
+    "start:dev": "concurrently \"node-sass -w -o public/ --output-style expanded style\" \"nodemon server.js\"",
+    "shajs": "sha384sum ./public/main.js | awk '{ print $1 }' | xxd -r -p | base64"
   },
   "author": "Yorick <yorick@ctrlalt.dev>",
   "license": "MPL-2.0",
